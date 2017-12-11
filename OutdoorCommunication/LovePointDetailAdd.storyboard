@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ghq-01-4PN">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--笔记-->
+        <scene sceneID="GaV-sm-5y5">
+            <objects>
+                <viewController storyboardIdentifier="LovePointDetail" title="笔记" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ghq-01-4PN" customClass="LovePointDetailAddVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sLp-9C-WTD"/>
+                        <viewControllerLayoutGuide type="bottom" id="u38-9O-xPE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oCg-hS-inv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hV-SO-UDE">
+                                <rect key="frame" x="16" y="275" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="OHX-kv-GDz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="U3h-mg-aMd"/>
+                                    <constraint firstAttribute="height" constant="64" id="aLi-be-FJW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="eYb-ev-z9m"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="添加.png"/>
+                                <connections>
+                                    <action selector="imgBtn1Click:" destination="Ghq-01-4PN" eventType="touchUpInside" id="2yE-9e-qOS"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-Im-9Zv">
+                                <rect key="frame" x="16" y="52" width="288" height="164"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="cq6-zU-LdC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gid-Im-9Zv" firstAttribute="top" secondItem="sLp-9C-WTD" secondAttribute="bottom" constant="32" id="J7P-dI-9ei"/>
+                            <constraint firstItem="Gid-Im-9Zv" firstAttribute="leading" secondItem="oCg-hS-inv" secondAttribute="leadingMargin" id="L9f-RZ-PsT"/>
+                            <constraint firstItem="Gid-Im-9Zv" firstAttribute="trailing" secondItem="oCg-hS-inv" secondAttribute="trailingMargin" id="S7S-TJ-FFc"/>
+                            <constraint firstItem="3hV-SO-UDE" firstAttribute="leading" secondItem="oCg-hS-inv" secondAttribute="leadingMargin" id="h6G-O3-RMr"/>
+                            <constraint firstItem="3hV-SO-UDE" firstAttribute="top" secondItem="Gid-Im-9Zv" secondAttribute="bottom" constant="59" id="y0H-oq-v50"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailTextView" destination="Gid-Im-9Zv" id="30a-YO-Y6G"/>
+                        <outlet property="imgButton1" destination="3hV-SO-UDE" id="t2j-fj-J8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3lB-dw-KQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703.125" y="-282.04225352112678"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="添加.png" width="64" height="64"/>
+    </resources>
+</document>

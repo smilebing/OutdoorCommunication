@@ -6,12 +6,24 @@
 //  Copyright © 2017年 朱贺. All rights reserved.
 //
 
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <UIKit/UIKit.h>
+#import <BaiduTraceSDK/BaiduTraceSDK.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "MainTabBarViewController.h"
+
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,BMKGeneralDelegate>
+
+@property(strong,nonatomic) BMKMapManager* mapManager;
+
 
 @property (strong, nonatomic) UIWindow *window;
 
 
+@property (strong, nonatomic) MainTabBarViewController *mainTabBarController;
+
 @end
+
+
 

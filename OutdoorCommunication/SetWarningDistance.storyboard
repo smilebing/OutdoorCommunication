@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AQV-K6-lK8">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Warning DistanceVC-->
+        <scene sceneID="Xiw-dt-g7f">
+            <objects>
+                <viewController id="AQV-K6-lK8" customClass="SetWarningDistanceVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJ7-RN-JLX"/>
+                        <viewControllerLayoutGuide type="bottom" id="bOv-4g-MGL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VkY-E7-5u6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-rZ-SO8">
+                                <rect key="frame" x="83" y="168" width="155" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="6Au-zn-yt3"/>
+                                    <constraint firstAttribute="height" constant="21" id="CXr-2d-a8I"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Wh9-yI-F2d"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="nhi-MB-8G9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="20" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="6T2-hs-P62">
+                                <rect key="frame" x="68" y="269" width="185" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="1H1-Zm-GnT"/>
+                                    <constraint firstAttribute="height" constant="30" id="KWd-B7-oHg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="181" id="fwt-iH-UZ8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="kMs-gx-voz"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.070162810389999997" green="0.68728965519999996" blue="0.41059285400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="distaneChange:" destination="AQV-K6-lK8" eventType="valueChanged" id="2fg-cE-s6Y"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E4x-rZ-SO8" firstAttribute="centerX" secondItem="VkY-E7-5u6" secondAttribute="centerX" id="1xy-Yp-501"/>
+                            <constraint firstItem="6T2-hs-P62" firstAttribute="top" secondItem="E4x-rZ-SO8" secondAttribute="bottom" constant="80" id="NXY-LM-6Z8"/>
+                            <constraint firstItem="E4x-rZ-SO8" firstAttribute="top" secondItem="qJ7-RN-JLX" secondAttribute="bottom" constant="148" id="Nkb-jf-ESd"/>
+                            <constraint firstItem="6T2-hs-P62" firstAttribute="centerX" secondItem="VkY-E7-5u6" secondAttribute="centerX" id="RU0-cu-QOO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="distaceSlider" destination="6T2-hs-P62" id="x8G-PV-UCI"/>
+                        <outlet property="distace_label" destination="E4x-rZ-SO8" id="a2o-oq-DK4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKk-Nr-eVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="56.221889055472268"/>
+        </scene>
+    </scenes>
+</document>
